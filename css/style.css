@@ -1,0 +1,44 @@
+header{
+    width: 100%;
+    height: 150px;
+}
+main{
+    width: 100%;
+    height: calc(100vh - 250px);
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    width: 100%;
+    height: 100px;
+}
+
+
+main #container-grid{
+    width: calc((100vh - 250px) * 0.8);
+    height: calc((100vh - 250px) * 0.8);
+    background-color: azure;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid azure;
+}
+
+#container-grid .cell{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    background-color: lightcoral;
+    border: 2px solid azure;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    font-weight: bold;
+}
+
+#container-grid .cell-active{
+    background-color: aqua;
+}
