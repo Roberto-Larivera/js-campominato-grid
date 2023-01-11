@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Griglia Campo Minato</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/debug.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
@@ -16,19 +17,30 @@
 </head>
 <body>
     <header>
-        <select id="select-difficulty">
-            <option selected disabled>Seleziona una difficoltà</option>
-            <option value="easy">Facile</option>
-            <option value="medium">Medio</option>
-            <option value="hard">Difficile</option>
-        </select>
-        <button type="button" id="submit-start">Start</button>
+        <div class="hea-left">
+            <i class="fa-solid fa-skull fa-5x"></i>
+            <h1>
+                Campo Minato
+            </h1>
+        </div>
+        <div class="hea-right">
+            <label for="select-difficulty">Difficoltà:</label>
+            <select id="select-difficulty">
+                <option class="option-select" selected disabled>Scegli...</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button type="button" id="submit-start">Start</button>
+        </div>
     </header>
     <main>
         <div id="container-grid"></div>
     </main>
     <footer>
-
+        <h3>
+            by Roberto Larivera
+        </h3>
     </footer>
     <script type="text/javascript" src="js/scripts.js"></script>
 </body>

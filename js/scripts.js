@@ -14,19 +14,19 @@ submitStart.addEventListener('click',                   // click su start
         if(selectionDif == 'easy'){
             console.log('Hai inserito EASY');
             // funzione principale
-        createCellGrid(containerGrid,100);                  //chiamata funzione principale
+        createCellGrid(containerGrid,100,'cell-easy');                  //chiamata funzione principale
         
         }
         else if(selectionDif == 'medium'){
             console.log('Hai inserito MEDIUM');
             // funzione principale
-        createCellGrid(containerGrid,81);                  //chiamata funzione principale
+        createCellGrid(containerGrid,81,'cell-medium');                  //chiamata funzione principale
         
         }
         else if(selectionDif == 'hard'){
             console.log('Hai inserito HARD');
             // funzione principale
-        createCellGrid(containerGrid,49);                  //chiamata funzione principale
+        createCellGrid(containerGrid,49,'cell-hard');                  //chiamata funzione principale
         
         }
         else{
@@ -56,12 +56,13 @@ submitStart.addEventListener('click',                   // click su start
 
 
 
-function createCellGrid(containerGrid,n){                 //funzione principale ---- creazione celle dentro griglia 
+function createCellGrid(containerGrid,numberN,difS){                 //funzione principale ---- creazione celle dentro griglia 
     containerGrid.innerHTML = "";                       //serve per svuotare il div prima di doverlo riempire
-    for (let i = 1 ; i <= n ; i++){
+    for (let i = 1 ; i <= numberN ; i++){
         
         const newCell = document.createElement('div');
-        newCell.classList.add('cell');
+        newCell.classList.add('cell',difS);
+        //newCell.classList.add(difS);
         newCell.innerHTML = i;
         containerGrid.append(newCell);
 

@@ -1,8 +1,12 @@
 header{
+    padding: 20px;
     width: 100%;
     height: 150px;
+    display: flex;
+    justify-content: space-between;
 }
 main{
+    padding: 20px;
     width: 100%;
     height: calc(100vh - 250px);
     background-color: aquamarine;
@@ -16,6 +20,24 @@ footer{
 }
 
 
+header .hea-left,
+header .hea-right{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+header .hea-right{
+    
+
+}
+header .hea-right{
+    justify-content: flex-end;
+}
+
+
+
 main #container-grid{
     width: calc((100vh - 250px) * 0.8);
     height: calc((100vh - 250px) * 0.8);
@@ -26,12 +48,9 @@ main #container-grid{
 }
 
 #container-grid .cell{
-    width: calc(100% / 10);
-    height: calc(100% / 10);
     background-color: lightcoral;
     border: 2px solid azure;
     cursor: pointer;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,6 +58,29 @@ main #container-grid{
     font-weight: bold;
 }
 
+#container-grid .cell-easy{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+#container-grid .cell-medium{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+#container-grid .cell-hard{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
+
 #container-grid .cell-active{
     background-color: aqua;
+}
+
+
+#select-difficulty{
+    padding: 5px;
+    width: 150px;
+    margin: 0 10px;
+}
+#submit-start{
+    padding: 5px 20px;
 }
