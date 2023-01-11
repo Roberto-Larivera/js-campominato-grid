@@ -1,12 +1,13 @@
 console.log('int ok');
 
 const containerGrid = document.getElementById('container-grid');
+console.log('containerGrid',containerGrid);
 const submitStart = document.getElementById('submit-start');
 
 submitStart.addEventListener('click',                   // click su start
 
     function(){                                         // click su start
-        if(containerGrid == ""){
+        if(containerGrid.innerHTML == ""){
             console.log('La griglia è VUOTA')
             for (let i = 1 ; i <= 100 ; i++){
                 const newCell = document.createElement('div');
