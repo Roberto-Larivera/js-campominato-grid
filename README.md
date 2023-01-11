@@ -16,3 +16,61 @@ Ad esempio:
 Di cosa ho bisogno per generare i numeri?
 Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
+
+
+
+
+
+
+
+
+
+## prove
+
+if(containerGrid.innerHTML == ""){
+            console.log('La griglia è VUOTA')
+            for (let i = 1 ; i <= 100 ; i++){
+                const newCell = document.createElement('div');
+                newCell.classList.add('cell');
+                newCell.innerHTML = i;
+                containerGrid.append(newCell);
+            
+                newCell.addEventListener('click',
+                    function () {
+                        if(newCell.classList.contains('cell-active')){
+                            newCell.classList.remove('cell-active');
+                            console.log('Hai cliccato su ', i);
+                        }
+                        else{
+                            newCell.classList.add('cell-active');
+                            console.log('Hai cliccato su ', i);
+            
+                        }
+                    }
+                )
+            }
+        }
+        else{
+            console.log('La griglia è PIENA, verrà svuotata e poi riempita di nuovo')
+            containerGrid.innerHTML = "";
+            for (let i = 1 ; i <= 100 ; i++){
+                const newCell = document.createElement('div');
+                newCell.classList.add('cell');
+                newCell.innerHTML = i;
+                containerGrid.append(newCell);
+            
+                newCell.addEventListener('click',
+                    function () {
+                        if(newCell.classList.contains('cell-active')){
+                            newCell.classList.remove('cell-active');
+                            console.log('Hai cliccato su ', i);
+                        }
+                        else{
+                            newCell.classList.add('cell-active');
+                            console.log('Hai cliccato su ', i);
+            
+                        }
+                    }
+                )
+            }
+        }
