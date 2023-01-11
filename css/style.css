@@ -27,6 +27,7 @@ header .hea-right{
 
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 header .hea-right{
     
